@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">测试APP</string>
+    <string name="login_name">登录账号:</string>
+    <string name="login_pwd">登录密码:</string>
+    <string name="img_code">验 证 码:</string>
+    <string name="login_btn">登录</string>
+    <string name="server_setting">服务设置</string>
+</resources>
