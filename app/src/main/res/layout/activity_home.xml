@@ -29,6 +29,19 @@
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="49dp"
                     tools:layout_editor_absoluteY="349dp" />
+
+                <Button
+                    android:id="@+id/news_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/login_name_tip"
+                    android:text="获取新闻列表"
+                    style="@style/login_btn"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="140dp"
+                    tools:layout_editor_absoluteY="475dp"
+                    />
+
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

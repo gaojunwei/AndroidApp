@@ -38,16 +38,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.login_btn -> {
                 var userName = loginName.text.toString()
                 var userPwd = loginPwd.text.toString()
-                if(userName.isNullOrBlank() || userName != "admin"){
-                    Toast.makeText(this,"账号错误", Toast.LENGTH_SHORT).show()
-                    return
-                }
-                if(userPwd.isNullOrBlank() || userPwd != "123456"){
-                    Toast.makeText(this,"密码错误", Toast.LENGTH_SHORT).show()
-                    return
-                }
 
-                Toast.makeText(this,"登录成功，账号:" + loginName.text.toString()+"!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"登录成功，账号:$userName!",Toast.LENGTH_SHORT).show()
                 //跳转到账户中心，并传参
                 val intent = Intent(this@MainActivity, HomeActivity::class.java)
                 intent.putExtra("login_name", loginName.text.toString())
