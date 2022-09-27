@@ -1,12 +1,12 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.util.AppUtils
 
 /**
  * 登录后
@@ -30,14 +30,29 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.news_btn -> {
-                Thread(){
-                    //获取新闻列表
-                    var url = "https://demo-api.apipost.cn/api/demo/news_list?mobile=18289454846&theme_news=国际新闻&page=1&pageSize=20"
-                    var httpClient = HttpUtil()
-                    var result = httpClient.get(url)
-                    Log.i("响应数据", "$result")
-                    //Toast.makeText(HomeActivity,"登录成功，账号:$result!",Toast.LENGTH_SHORT).show()
-                }.start()
+                //获取新闻列表
+                RequestNewsListTask().start()
+            }
+        }
+    }
+
+    private fun doWork(data: String?) {
+        Toast.makeText(applicationContext, "获取新闻列表数据成功!", Toast.LENGTH_SHORT).show()
+        data
+    }
+
+    private inner class RequestNewsListTask : Thread() {
+        override fun run() {
+            //获取新闻列表
+            //var url = "https://demo-api.apipost.cn/api/demo/news_list?mobile=18289454846&theme_news=国际新闻&page=1&pageSize=20"
+            var url = "http://1.1.1.254:8090/mitg-commander/park/room/page?page=1&limit=10"
+            var httpClient = AppUtils
+            var result = httpClient.get(url)
+            Log.i("响应数据", "$result")
+
+            //切换到UI线程执行渲染工作
+            this@HomeActivity.runOnUiThread {
+                doWork(result)
             }
         }
     }
