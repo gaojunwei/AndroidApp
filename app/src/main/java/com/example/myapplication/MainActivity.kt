@@ -14,7 +14,7 @@ import com.example.myapplication.click.MyLongClickListener
  * https://juejin.cn/post/7021682733718077454
  *
  * https://www.geeksforgeeks.org/dynamic-autocompletetextview-in-kotlin/
- *
+ * https://www.delftstack.com/zh/howto/kotlin/initialize-array-in-kotlin/#%25E5%259C%25A8-kotlin-%25E4%25B8%25AD%25E4%25BD%25BF%25E7%2594%25A8-arrayof-%25E5%2587%25BD%25E6%2595%25B0%25E5%25A3%25B0%25E6%2598%258E%25E5%2592%258C%25E5%2588%259D%25E5%25A7%258B%25E5%258C%2596%25E6%2595%25B0%25E7%25BB%2584
  */
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 

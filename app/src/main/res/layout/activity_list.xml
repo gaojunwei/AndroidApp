@@ -22,16 +22,6 @@
             android:text="刷新页面"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="多项提示文本框:"
-            android:textSize="20dp" />
-        <MultiAutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mText"
-            android:completionThreshold="1" />
     </LinearLayout>
 
     <ListView
